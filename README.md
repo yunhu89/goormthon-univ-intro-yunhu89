@@ -1,4 +1,3 @@
-# goormtone-univ-intro-yunhu89
 # 👋 자기소개
 
 - 이름: 김윤후
