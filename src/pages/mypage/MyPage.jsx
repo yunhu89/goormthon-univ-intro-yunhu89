@@ -1,9 +1,9 @@
 // 기존 App.jsx 내용 그대로 복붙!
 import { useState } from 'react';
-import Information from '../components/Information';
-import Link from '../components/Link';
-import LikeViewcount from '../components/LikeViewcount';
-import { Container, Button } from '../components/styles';
+import Information from '../../components/Information';
+import Link from '../../components/Link';
+import LikeViewcount from '../../components/LikeViewcount';
+import { Container, Button } from '../../components/styles';
 import { Link as RouterLink } from 'react-router-dom'; // 컴포넌트와 이름 충돌
 
 function MyPage() {

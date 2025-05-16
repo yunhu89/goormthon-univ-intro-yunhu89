@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 function TodoApp() {
+  const { username } = useParams();
+  //http://localhost:5173/todoapp/kimyunhu 이렇게 값을 주면 나옴
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState('');
   const [editId, setEditId] = useState(null);
@@ -41,7 +44,9 @@ function TodoApp() {
 
   return (
     <div style={{ padding: 20 }}>
-      <h3>To-do</h3>
+      <h3> {username}의 To-do List는 뭔가요? </h3>
+      {username === "윤후" && <p>맞습니다, 저의 To-do list입니다.</p>}
+
       <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
