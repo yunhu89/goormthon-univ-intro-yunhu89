@@ -13,8 +13,9 @@ function TodoApp() {
 
     if (editId !== null) {
       setTodos(todos.map(todo =>
-        todo.id === editId ? { ...todo, text: input } : todo
+        todo.id === editId ? { ...todo, text: input } : todo 
       ));
+      { /* map함수가 일일히 하나하하나 배열을 다 뒤져서 체킹하는과정. prev -> prev를 활용할 수 있음 */}
       setEditId(null);
     } else {
       setTodos([...todos, { //새로 추가 
@@ -44,8 +45,7 @@ function TodoApp() {
 
   return (
     <div style={{ padding: 20 }}>
-      <h3> {username}의 To-do List는 뭔가요? </h3>
-      {username === "윤후" && <p>맞습니다, 저의 To-do list입니다.</p>}
+     <h3>{username ? `${username}의 To-do List는 뭔가요?` : '어서오세요, 당신의 To-do List는 무엇인가요?'}</h3>
 
       <input
         value={input}
